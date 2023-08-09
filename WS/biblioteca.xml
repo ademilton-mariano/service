@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (estoque+)>
+    <!ELEMENT estoque (endereço+)>
+    <!ELEMENT endereço (livro+)>
+    <!ATTLIST endereço tema CDATA #REQUIRED>
+    <!ELEMENT livro (titulo, editora, quantidade_paginas, ano, edicao?)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT editora (#PCDATA)>
+    <!ELEMENT quantidade_paginas (#PCDATA)>
+    <!ELEMENT ano (#PCDATA)>
+    <!ELEMENT edicao (#PCDATA)>
+]>
+<biblioteca>
+  <estoque>
+    <endereço tema="infantil">
+      <livro>
+        <titulo>Pinóquio</titulo>
+        <editora>Estrela</editora>
+        <quantidade_paginas>200</quantidade_paginas>
+        <ano>1990</ano>
+      </livro>
+      <livro>
+        <titulo>João e o pé de feijão</titulo>
+        <editora></editora>
+        <quantidade_paginas>55</quantidade_paginas>
+      </livro>
+      <livro>
+        <titulo>Cinderela</titulo>
+        <editora>Fantasia</editora>
+        <quantidade_paginas>30</quantidade_paginas>
+        <ano>1980</ano>
+      </livro>
+    </endereço>
+    <endereço tema="Folclore">
+      <livro>
+        <titulo>Lobisomen</titulo>
+        <editora>Floresta</editora>
+        <quantidade_paginas>200</quantidade_paginas>
+        <ano>2000</ano>
+      </livro>
+      <livro>
+        <titulo>Mula sem cabeça</titulo>
+        <editora></editora>
+        <quantidade_paginas></quantidade_paginas>
+      </livro>  
+      <livro>
+        <titulo>Saci Pererê</titulo>
+        <editora>Ventania</editora>
+        <quantidade_paginas>100</quantidade_paginas>
+        <ano>1900</ano>
+        <edicao>limitada</edicao>
+      </livro>
+    </endereço>
+  </estoque>
+</biblioteca>
